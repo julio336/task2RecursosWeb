@@ -31,11 +31,7 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    
-    @IBAction func isbnAction(sender: UITextField){
-        
-    }
-    
+ 
     func textFieldShouldReturn(textField: UITextField!) -> Bool {   //delegate method
         textField.resignFirstResponder()
         getData()
