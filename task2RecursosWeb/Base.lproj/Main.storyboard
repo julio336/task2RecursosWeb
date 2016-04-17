@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="task2RecursosWeb" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recursos web de openlibrary.org" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3W6-Ks-rtl">
+                                <rect key="frame" x="20" y="28" width="335" height="55"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" placeholderIntrinsicWidth="435" placeholderIntrinsicHeight="30" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ISBN del libro" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="HsO-Ej-Hud">
+                                <rect key="frame" x="20" y="91" width="335" height="30"/>
+                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="search"/>
+                                <connections>
+                                    <action selector="isbnAction:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="OPo-gf-Ceq"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="MxT-Jm-nTh"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titulo del libro" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p0a-E4-FH2">
+                                <rect key="frame" x="20" y="161" width="335" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="Uuk-K5-bbx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Autores:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nhu-Js-zzX">
+                                <rect key="frame" x="20" y="217" width="335" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="zkq-78-gMK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uhW-Bc-iZR">
+                                <rect key="frame" x="20" y="290" width="335" height="357"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="HsO-Ej-Hud" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="91" id="4gF-E9-Kfm"/>
+                            <constraint firstItem="Nhu-Js-zzX" firstAttribute="top" secondItem="p0a-E4-FH2" secondAttribute="bottom" constant="18" id="Gkd-Au-Rf2"/>
+                            <constraint firstItem="HsO-Ej-Hud" firstAttribute="leading" secondItem="3W6-Ks-rtl" secondAttribute="leading" id="IOE-hj-WUY"/>
+                            <constraint firstItem="uhW-Bc-iZR" firstAttribute="leading" secondItem="Nhu-Js-zzX" secondAttribute="leading" id="IR1-ee-jSj"/>
+                            <constraint firstItem="3W6-Ks-rtl" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="Mmf-e2-1dg"/>
+                            <constraint firstItem="HsO-Ej-Hud" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WMR-tv-bJx"/>
+                            <constraint firstItem="HsO-Ej-Hud" firstAttribute="trailing" secondItem="3W6-Ks-rtl" secondAttribute="trailing" id="YMS-sY-u4a"/>
+                            <constraint firstItem="uhW-Bc-iZR" firstAttribute="trailing" secondItem="Nhu-Js-zzX" secondAttribute="trailing" id="ZvM-dK-gCs"/>
+                            <constraint firstItem="HsO-Ej-Hud" firstAttribute="leading" secondItem="p0a-E4-FH2" secondAttribute="leading" id="gXD-e9-8ub"/>
+                            <constraint firstItem="uhW-Bc-iZR" firstAttribute="top" secondItem="Nhu-Js-zzX" secondAttribute="bottom" constant="8" id="izj-uR-0wq"/>
+                            <constraint firstItem="HsO-Ej-Hud" firstAttribute="trailing" secondItem="Nhu-Js-zzX" secondAttribute="trailing" id="jmL-N9-pn2"/>
+                            <constraint firstItem="HsO-Ej-Hud" firstAttribute="top" secondItem="3W6-Ks-rtl" secondAttribute="bottom" constant="8" symbolic="YES" id="k0l-9T-Ddl"/>
+                            <constraint firstItem="HsO-Ej-Hud" firstAttribute="leading" secondItem="Nhu-Js-zzX" secondAttribute="leading" id="kP8-c8-Jtc"/>
+                            <constraint firstItem="p0a-E4-FH2" firstAttribute="top" secondItem="HsO-Ej-Hud" secondAttribute="bottom" constant="40" id="u3Z-ZE-4h4"/>
+                            <constraint firstItem="HsO-Ej-Hud" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="4" id="wBJ-Vo-3DQ"/>
+                            <constraint firstAttribute="bottom" secondItem="uhW-Bc-iZR" secondAttribute="bottom" constant="20" symbolic="YES" id="x47-wK-7V5"/>
+                            <constraint firstItem="HsO-Ej-Hud" firstAttribute="trailing" secondItem="p0a-E4-FH2" secondAttribute="trailing" id="xVt-kk-1id"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="authorLabel" destination="Nhu-Js-zzX" id="ff6-yE-Aw4"/>
+                        <outlet property="frontImageView" destination="uhW-Bc-iZR" id="UDW-MY-vja"/>
+                        <outlet property="isbnTextField" destination="HsO-Ej-Hud" id="w4E-wZ-JA8"/>
+                        <outlet property="titleLabel" destination="p0a-E4-FH2" id="hqc-oA-g9a"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="379.5" y="325.5"/>
+        </scene>
+    </scenes>
+</document>
